@@ -11,9 +11,15 @@
                 <a href="{{route('admin.users')}}"><button class="btn btn-primary btn-sm" disabled>Tambah Data</button></a>   
                 @endif
                 <!-- Button trigger modal -->
+                @if (Auth::user()->role != 0)
                 <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     Import Excel
                 </button>
+                @else
+                <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop" disabled>
+                    Import Excel
+                </button>
+                @endif
 
                 <a href="{{ route('download', ['file' => 'template.xlsx']) }}" class="btn btn-warning btn-sm">Unduh Template</a>
 
