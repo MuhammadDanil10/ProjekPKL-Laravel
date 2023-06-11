@@ -27,19 +27,19 @@
               margin: 0 auto;
           }
 
-          .chart {
-              width: 100%;
-              max-width: 100%;
-              height: 360px;
-              margin-bottom: 10vh;
-          }
+            .chart {
+                width: 100%;
+                max-width: 100%;
+                height: 360px;
+                margin-bottom: 10vh;
+            }
 
-          @media only screen and (max-width: 600px) {
-              .chart {
-                  height: 200px;
-                  width: 400px;
-              }
-          }
+            @media only screen and (max-width: 600px) {
+                .chart {
+                    height: 200px;
+                    width: 400px;
+                }
+            }
 
         </style>
         <html>
