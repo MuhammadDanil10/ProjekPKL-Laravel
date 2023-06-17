@@ -30,7 +30,10 @@
 <body>
   <div id="app">
     <nav class="navbar navbar-expand-lg navbar-dark p-3" style="background-color: #145DA0">
-      <div class="container-fluid">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="{{asset('assets/img/logovote.png')}}" width="50" height="50" class="d-inline-block align-top" alt="">
+        </a>
         <a class="navbar-brand" href="{{route('welcome')}}">E-Voting</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -75,9 +78,6 @@
               </div>
             </li>
           @endguest
-          </ul>
-          <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
-            {{-- right menu --}}
           </ul>
         </div>
       </div>
