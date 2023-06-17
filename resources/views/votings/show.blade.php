@@ -26,15 +26,15 @@
             <div class="card-body">
                 <img src="{{ asset('photos/' . $voting->photo) }}" class="foto rounded mx-auto d-block mt-3" width="40%" height="40%" alt="{{ $voting->name }}">
                 <div class="container mt-5 w-75">
-                <p class="card-text font-bold">VISI: {{ $voting->visi }}</p> 
-                <p class="card-text"  style="margin-bottom: 15vh">MISI: {{$voting->misi}}</p>
-                <h4 class="h4 text-center">BIODATA</h4>
-                <p class="card-text"  style="margin-bottom: 5vh">NAMA: <span class="p-5">{{$voting->name}}</span></p>
-                <p class="card-text"  style="margin-bottom: 5vh">UMUR  : <span class="p-5">{{$voting->umur}}</span></p>
-                <p class="card-text"  style="margin-bottom: 5vh">ALAMAT: <span class="p-4">{{$voting->alamat}}</span> </p>
-                <p class="card-text"  style="margin-bottom: 5vh">HOBI: <span class="p-5">{{$voting->hobi}}</span></p>
-                <p class="card-text"  style="margin-bottom: 5vh">JABATAN SEBELUMNYA: <span class="p-2">{{$voting->jabatan_lama}}</span></p>
-                <p class="card-text"  style="margin-bottom: 5vh">MOTIVASI: <span class="p-4">{{$voting->motivasi}}</span></p>
+                <p class="card-text font-bold" style="text-align:justify;">VISI: {{ $voting->visi }}</p> 
+                <p class="card-text"  style="margin-bottom: 10vh; text-align:justify;">MISI: {{$voting->misi}}</p>
+                <h4 class="h4 font-bold text-center">BIODATA</h4>
+                <p class="card-text text-center"  style="margin-bottom: 1vh; font-weight:bolder;">NAMA:</p> <p class="card-text text-center">{{$voting->name}}</p>
+                <p class="card-text text-center"  style="margin-bottom: 1vh; font-weight:bolder;">UMUR  :</p><p class="card-text text-center">{{$voting->umur}}</p>
+                <p class="card-text text-center"  style="margin-bottom: 1vh; font-weight:bolder;">ALAMAT:</p><p class="card-text text-center">{{$voting->alamat}}</p>
+                <p class="card-text text-center"  style="margin-bottom: 1vh; font-weight:bolder;">HOBI:</p><p class="card-text text-center">{{$voting->hobi}}</p>
+                <p class="card-text text-center"  style="margin-bottom: 1vh; font-weight:bolder;">JABATAN SEBELUMNYA:</p><p class="card-text text-center">{{$voting->jabatan_lama}}</p>
+                <p class="card-text text-center"  style="margin-bottom: 1vh; font-weight:bolder;">MOTIVASI:</p><p class="card-text text-center">{{$voting->motivasi}}</p>
                 </div>
             </div>
         </div>
