@@ -78,7 +78,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/votings/{voting}/vote', [VotingController::class, 'vote'])->name('votings.vote');
     
     // READ MORE KANDIDAT
-    Route::get('/votings/{id}', [VotingController::class, 'show'])->name('votings.show');
+   
     
     
     
@@ -95,8 +95,7 @@ Route::middleware(['auth'])->group(function () {
 
 // INDEX 
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
-
-
+Route::get('/votings/{id}', [VotingController::class, 'show'])->name('votings.show');
 
 
 
