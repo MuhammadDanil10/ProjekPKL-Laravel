@@ -71,27 +71,31 @@ Route::group(['middleware'=>['auth','adminMiddleware:2']], function(){
 
 });
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/home', [VotingController::class, 'index'])->name('votings.index');
+    Route::get('/alert', [VotingController::class, 'endPage'])->name('votings.endPage');
+    Route::post('/home', [AdminController::class, 'store'])->name('votings.store');
+    Route::post('/votings/{voting}/vote', [VotingController::class, 'vote'])->name('votings.vote');
+    
+    // READ MORE KANDIDAT
+    Route::get('/votings/{id}', [VotingController::class, 'show'])->name('votings.show');
+    
+    
+    
+    // DOM-PDF
+    Route::get('/export-pdf', [AdminController::class, 'exportPdf'])->name('export');
+    Route::get('/export-Pdf', [AdminController::class, 'exportPdfp'])->name('memilih.pdf');
+    Route::get('/data/export/{votingId}', [ChartController::class, 'export'])->name('zeta.export');
+    
+    
+    // vote edit
+    Route::get('/votings/{id}/edit', [VotingController::class, 'edit'])->name('votings.edit');
+    Route::put('/votings/{id}', [VotingController::class, 'update'])->name('votings.update');
+});
+
 // INDEX 
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
-Route::get('/home', [VotingController::class, 'index'])->name('votings.index');
-Route::get('/alert', [VotingController::class, 'endPage'])->name('votings.endPage');
-Route::post('/home', [AdminController::class, 'store'])->name('votings.store');
-Route::post('/votings/{voting}/vote', [VotingController::class, 'vote'])->name('votings.vote');
 
-// READ MORE KANDIDAT
-Route::get('/votings/{id}', [VotingController::class, 'show'])->name('votings.show');
-
-
-
-// DOM-PDF
-Route::get('/export-pdf', [AdminController::class, 'exportPdf'])->name('export');
-Route::get('/export-Pdf', [AdminController::class, 'exportPdfp'])->name('memilih.pdf');
-Route::get('/data/export/{votingId}', [ChartController::class, 'export'])->name('zeta.export');
-
-
-// vote edit
-Route::get('/votings/{id}/edit', [VotingController::class, 'edit'])->name('votings.edit');
-Route::put('/votings/{id}', [VotingController::class, 'update'])->name('votings.update');
 
 
 
