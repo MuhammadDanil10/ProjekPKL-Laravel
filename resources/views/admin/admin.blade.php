@@ -97,7 +97,7 @@
                           <div class="card rounded">
                               <img src="{{ asset('photos/' . $voting->photo) }}" class="card-img-top rounded" alt="{{ $voting->name }}">
                               <div class="card-body">
-                                  <h3 class="h3 card-title">{{ $voting->name }}</h>
+                                  <h3 class="h3 card-title">{{ $voting->name }}</h3>
                                   <h3 class="h3 mx-auto mt-5">Jumlah Suara:  {{ $voting->votes }}</h3> 
                               </div>
                               <a href="{{ route('data.show', ['votingId' => $voting->id]) }}" class="btn btn-info">Cek Data {{ $voting->name }}</a>
